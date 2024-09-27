@@ -5,8 +5,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\eshop;
-use App\Http\Controllers\ProdutosController;
-use App\Models\produtos;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,8 @@ use App\Models\produtos;
 |
 */
 //ROTAS Eshop
-Route::get('/', [ProdutosController::class, 'create']);
-Route::post('/', [eshop::class, 'view']);
+
+Route::get('/', [eshop::class, 'view']);
 
 
 Route::middleware('auth')->group(function () {

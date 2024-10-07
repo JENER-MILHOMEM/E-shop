@@ -13,7 +13,7 @@ import pumaLogo from '../img/puma.jpg';
 import vansLogo from '../img/vans.jpg';
 function carrosel() {
     return (
-        <div className="flex justify-center items-center bg-zinc-950 mt-10"> 
+        <div className="flex justify-center items-center bg-zinc-950 mt-10 w-full"> 
             <Swiper
             slidesPerView={4}
             spaceBetween={0}  

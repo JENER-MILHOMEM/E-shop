@@ -16,6 +16,7 @@ class ProdutosController extends Controller
             'categoria' => 'required',
             'marca' => 'required',
             'imgs' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'estoque' => 'required',
         ]);
     
         // Verifica se o arquivo de imagem foi enviado

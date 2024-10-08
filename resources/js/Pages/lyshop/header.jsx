@@ -89,7 +89,7 @@ export default function Navbar() {
             {showCategories && (
               <div className="absolute bg-white text-black mt-2 p-4 grid grid-cols-3 gap-4 shadow-lg w-80 z-50">
                 <a href="#" className="hover:underline">Original</a>
-                <a href="#" className="hover:underline">Masculino</a>
+                <a href="/produtos/masculino" className="hover:underline">Masculino</a>
                 <a href="#" className="hover:underline">Feminino</a>
                 <a href="#" className="hover:underline">Esportivo</a>
                 <a href="#" className="hover:underline">Unissex</a>

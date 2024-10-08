@@ -6,12 +6,16 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\eshop;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\CategoriasControllers;
 
 
 //ROTAS Eshop
 Route::post('/criarProduto', [ProdutosController::class, 'create']);
 Route::get('/viewCriarProduto', [ProdutosController::class, 'viewCreate']);
 Route::get('/', [eshop::class, 'view']);
+
+// rotas de categorias 
+Route::get('/produtos/masculino', [CategoriasControllers::class, 'masculino']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -7,6 +7,7 @@ const Create = () => {
     preco: '',
     categoria: '',
     marca: '',
+    estoque: '',
     imgs: null,
   });
 
@@ -43,7 +44,18 @@ const Create = () => {
        </div>
         {errors.preco && <div>{errors.preco}</div>}
       </div>
-
+      <div className=' text-center'>
+        <label className=' text-white'>Estoque</label>
+       <div>
+       <input
+          type="number"
+          value={data.estoque}
+          onChange={(e) => setData('estoque', e.target.value)}
+          className='px-1 text-black'
+        />
+       </div>
+        {errors.preco && <div>{errors.estoque}</div>}
+      </div>
       <div className=' text-center'>
         <label className=' text-white'>Categoria</label>
         

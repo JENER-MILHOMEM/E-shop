@@ -2,7 +2,7 @@ import React from 'react';
 
 const Produtos = ({ produtos }) => {
   return (
-    <div className='text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full overflow-x-hidden px-4 '>
+    <div className='text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-full overflow-x-hidden px-4 '>
       {produtos && produtos.length > 0 ? (
         produtos.map((produto) => (
           <div key={produto.id} className='flex flex-col bg-gray-300 py-4 px-3 gap-2 rounded-lg shadow-md   '>

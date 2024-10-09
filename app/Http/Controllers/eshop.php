@@ -14,5 +14,5 @@ class eshop extends Controller
             'produtos' => $produtos
         ]);
     }
-    
+   
 }

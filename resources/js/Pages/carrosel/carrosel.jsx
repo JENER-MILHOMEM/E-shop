@@ -13,7 +13,7 @@ import pumaLogo from '../img/puma.jpg';
 import vansLogo from '../img/vans.jpg';
 function carrosel() {
     return (
-        <div className="flex justify-center items-center bg-zinc-950 mt-10 w-full"> 
+        <div className="flex justify-center items-center bg-zinc-950 mt-10 w-full py-1"> 
             <Swiper
             slidesPerView={4}
             spaceBetween={0}  
@@ -22,7 +22,7 @@ function carrosel() {
             className=" w-full max-w-4xl"  
             >
               <SwiperSlide>
-                <img src={adidasLogo} alt="Adidas" className='w-24 h-24 rounded-full mx-auto' />
+                <img src={adidasLogo} alt="Adidas" className='w-24 h-24 rounded-full mx-auto ' />
               </SwiperSlide>
               <SwiperSlide>
                 <img src={nikeLogo} alt="Nike" className='w-24 h-24 rounded-full mx-auto' />

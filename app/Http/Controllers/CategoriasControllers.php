@@ -14,4 +14,18 @@ class CategoriasControllers extends Controller
             'produtos' => $produtos
         ]);
     }
+    public function feminino()
+    {
+        $produtos = Produtos::where('categoria', 'feminino')->get();
+        return Inertia::render('produtos/categorias/feminino', [
+            'produtos' => $produtos
+        ]);
+    }
+    public function esportivo()
+    {
+        $produtos = Produtos::where('categoria', 'esportivo')->get();
+        return Inertia::render('produtos/categorias/esportivo', [
+            'produtos' => $produtos
+        ]);
+    }
 }

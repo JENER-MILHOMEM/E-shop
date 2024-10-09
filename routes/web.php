@@ -9,14 +9,18 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\CategoriasControllers;
 
 
-//ROTAS Eshop
+//ROTAS Eshop---------------------------------------------------------------------
 Route::post('/criarProduto', [ProdutosController::class, 'create']);
 Route::get('/viewCriarProduto', [ProdutosController::class, 'viewCreate']);
 Route::get('/', [eshop::class, 'view']);
+//--------------------------------------------------------------------------------
 
-// rotas de categorias 
+
+// rotas de categorias------------------------------------------------------------ 
 Route::get('/produtos/masculino', [CategoriasControllers::class, 'masculino']);
-
+Route::get('/produtos/feminino', [CategoriasControllers::class, 'feminino']);
+Route::get('/produtos/esportivo', [CategoriasControllers::class, 'esportivo']);
+//----------------------------------------------------------------------------
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

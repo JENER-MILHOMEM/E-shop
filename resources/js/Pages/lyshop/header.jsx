@@ -31,7 +31,9 @@ export default function Navbar() {
         <div className="flex justify-between items-center px-5">
          
           <div className="flex items-center space-x-2">
+            <a href="/">
             <img src="/logo.png" alt="Logo" className="w-24 h-24" />
+            </a>
             
           </div>
 
@@ -90,8 +92,8 @@ export default function Navbar() {
               <div className="absolute bg-white text-black mt-2 p-4 grid grid-cols-3 gap-4 shadow-lg w-80 z-50">
                 <a href="#" className="hover:underline">Original</a>
                 <a href="/produtos/masculino" className="hover:underline">Masculino</a>
-                <a href="#" className="hover:underline">Feminino</a>
-                <a href="#" className="hover:underline">Esportivo</a>
+                <a href="/produtos/feminino" className="hover:underline">Feminino</a>
+                <a href="/produtos/esportivo" className="hover:underline">Esportivo</a>
                 <a href="#" className="hover:underline">Unissex</a>
                 <a href="#" className="hover:underline">Infantil</a>
               </div>

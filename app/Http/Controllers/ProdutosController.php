@@ -17,6 +17,7 @@ class ProdutosController extends Controller
             'marca' => 'required',
             'imgs' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'estoque' => 'required',
+            'linha' => 'required',
         ]);
     
         // Verifica se o arquivo de imagem foi enviado
@@ -39,5 +40,15 @@ class ProdutosController extends Controller
 
         return Inertia::render('produtos/criarProdutos');
     }
+    public function search(Request $request)
+{
+    $query = $request->input('query');
+    $user = auth()->user();
+    // Busca os produtos no banco de dados
+    $produtos = Produtos::where('nome', 'like', '%' . $query . '%')->get();
+    $produtosall = Produtos::all();
+    // Retorna os resultados da busca
+    return inertia('search/SearchResults', ['produtos' => $produtos, 'query' => $query, 'user' => $user, 'produtosall' => $produtosall]);
+}
     
 }

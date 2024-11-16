@@ -28,4 +28,11 @@ class CategoriasControllers extends Controller
             'produtos' => $produtos
         ]);
     }
+    public function original()
+    {
+        $produtos = Produtos::where('categoria', 'original')->get();
+        return Inertia::render('produtos/categorias/original', [
+            'produtos' => $produtos
+        ]);
+    }
 }

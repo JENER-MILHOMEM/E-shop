@@ -9,6 +9,7 @@ const Create = () => {
     marca: '',
     estoque: '',
     imgs: null,
+    linha: '',
   });
 
   const handleSubmit = (e) => {
@@ -68,6 +69,17 @@ const Create = () => {
         />
       </div>
         {errors.categoria && <div>{errors.categoria}</div>}
+      </div>
+      <div className=' text-center'>
+        <label className=' text-white'>linha</label>
+      <div>
+      <select name="select" value={data.linha} onChange={(e) => setData('linha', e.target.value)} className=" w-56 text-black" id="">
+        <option value="premium">premium</option>
+        <option value="lançamento">lançamento</option>
+        <option value="desconto">desconto</option>
+      </select>
+      </div>
+        {errors.linha && <div>{errors.linha}</div>}
       </div>
 
       <div className=' text-center'>

@@ -10,9 +10,16 @@ class eshop extends Controller
     public function view()
     {
         $produtos = Produtos::all();
+        $user = auth()->user();
+        $produtosPremium = Produtos::where('linha', 'premium')->get();
         return Inertia::render('eshop/main', [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'produtosPremium' => $produtosPremium,
+            'user' => $user
         ]);
     }
-   
+    public function carrinho()
+    {
+        return Inertia::render('eshop/carrinho');
+    }
 }

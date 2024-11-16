@@ -4,15 +4,16 @@ import Produtos from '../produtos/Produtos'
 import Banner from '../img/banner.jpg'
 import Carrosel from '../carrosel/carrosel';
 import Gif from '../img/gif.gif'
-function main ({ produtos }) {
+import ProdutosPremium from '../produtos/linha/premium'
+function main ({ produtos, produtosPremium, user }) {
   return (
 
    <div className='flex flex-col min-h-screen gap-1'>
     <div className='min-w-full'>
-     <Header />
+     <Header user={user}/>
     </div>
     <div className='flex flex-col' >
-        <div className='flex justify-center transition duration-500 hover:scale-105 py-4 '>
+        <div className='flex justify-center '>
         <img src={Banner} alt="img" className='border-2 border-zinc-950' />
         </div>
         <div className='w-screen'>
@@ -32,8 +33,8 @@ function main ({ produtos }) {
     <div className='py-4 text-center px-3.5 text-3xl'>
       <h1 className='text-white font-mono'>Linha Premium </h1>
     </div>
-    <div className='flex justify-center m-6 overflow-y-hidden h-screen'>
-
+    <div className='flex justify-center m-6 overflow-y-hidden '>
+      <ProdutosPremium produtos={produtosPremium} />
     </div>
    </div>
   )

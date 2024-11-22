@@ -172,7 +172,7 @@ export default function Navbar({ user }) {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <button className="flex items-center space-x-2">
+          <button className="flex  ">
             <AiOutlineMenu className="text-2xl" />
             <span>Categorias</span>
           </button>
@@ -189,13 +189,13 @@ export default function Navbar({ user }) {
           )}
         </div>
 
-        {/* Other Links */}
-        <a href="#" className="hover:underline">Produtos</a>
+        
+        
         <a href="#" className="hover:underline">Contato</a>
         <a href="https://rastreamento.correios.com.br/app/index.php" className="hover:underline">
           Rastreie Seu Pedido
         </a>
-        <a href="#" className="hover:underline">Políticas</a>
+        
       </div>
 
       {/* Divider */}
